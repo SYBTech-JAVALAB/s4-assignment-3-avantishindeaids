@@ -1,0 +1,42 @@
+package com;
+class employee {
+double calculateSalaryById(int employeeID) {
+return 0;
+}
+double calculateSalaryByHours(int hoursWorked, double rate) {
+return hoursWorked * rate;
+}
+double calculateSalaryWithBonus(int employeeID, double bonus) {
+return bonus;
+}
+double calculateAnnualSalary(double annualSalary) {
+return annualSalary;
+}
+double calculateSalaryWithOvertime(int hoursWorked, double rate, int overtimeHours) {
+return (hoursWorked * rate) + (overtimeHours * rate * 1.5);
+}
+double calculateSalaryAfterDeductions(double salary, double deductions) {
+return salary - deductions;
+}
+double calculateSalaryWithBonusAndDeductions(double salary, double bonus, double
+deductions) {
+return salary + bonus - deductions;
+}
+public static void main(String[] args) {
+employee emp = new employee();
+System.out.println("Salary for Employee ID 101: "
++ emp.calculateSalaryById(101));
+System.out.println("Salary based on hours worked (40 hrs @ 500/hr): "
++ emp.calculateSalaryByHours(40, 500));
+System.out.println("Salary with bonus for Employee ID 102: "
++ emp.calculateSalaryWithBonus(102, 5000));
+System.out.println("Annual salary: "
++ emp.calculateAnnualSalary(600000));
+System.out.println("Salary with overtime (40 hrs + 10 overtime hrs): "
++ emp.calculateSalaryWithOvertime(40, 500, 10));
+System.out.println("Salary after deductions: "
++ emp.calculateSalaryAfterDeductions(600000, 50000));
+System.out.println("Salary with bonus and deductions: "
++ emp.calculateSalaryWithBonusAndDeductions(600000, 50000, 30000));
+}
+}
